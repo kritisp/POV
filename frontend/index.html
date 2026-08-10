@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POV | AI Fashion Intelligence</title>
+    <!-- Modern Font: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Animated background -->
+    <div class="blob-cont">
+        <div class="yellow blob"></div>
+        <div class="red blob"></div>
+        <div class="green blob"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="logo">POV<span>.</span></h1>
+            <p class="subtitle">AI Cross-Brand Size Intelligence</p>
+        </header>
+
+        <section class="glass-card" id="form-section">
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="reference-mode">By Reference Brand</button>
+                <button class="tab-btn" data-tab="measurement-mode">By Body Size</button>
+            </div>
+
+            <form id="recommendation-form">
+                
+                <!-- Universal Inputs -->
+                <div class="input-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Select an item type...</option>
+                        <optgroup label="Men">
+                            <option value="mens_shirt">Men's Shirt (Tops)</option>
+                            <option value="mens_jeans">Men's Jeans (Bottoms)</option>
+                        </optgroup>
+                        <optgroup label="Women">
+                            <option value="womens_shirt">Women's Shirt (Tops)</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- Mode 1: Reference Brand -->
+                <div id="reference-mode" class="tab-content active">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="source_brand">Your Current Brand</label>
+                            <select id="source_brand" name="source_brand">
+                                <option value="" disabled selected>Select brand...</option>
+                                <option value="Zara">Zara</option>
+                                <option value="H&M">H&M</option>
+                                <option value="Levi's">Levi's</option>
+                                <option value="Nike">Nike</option>
+                                <option value="Adidas">Adidas</option>
+                                <option value="Puma">Puma</option>
+                                <option value="Gap">Gap</option>
+                                <option value="Calvin Klein">Calvin Klein</option>
+                                <option value="Ralph Lauren">Ralph Lauren</option>
+                                <option value="Gucci">Gucci</option>
+                                <option value="Prada">Prada</option>
+                                <option value="Zudio">Zudio</option>
+                                <option value="Uniqlo">Uniqlo</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="source_size">Size in this Brand</label>
+                            <select id="source_size" name="source_size">
+                                <option value="" disabled selected>Select...</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mode 2: Body Measurements -->
+                <div id="measurement-mode" class="tab-content">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="chest">Chest Size</label>
+                            <select id="chest" name="chest">
+                                <option value="" selected>Not Sure / Skip</option>
+                                <option value="32">32 inches (81 cm)</option>
+                                <option value="34">34 inches (86 cm)</option>
+                                <option value="36">36 inches (91 cm)</option>
+                                <option value="38">38 inches (96 cm)</option>
+                                <option value="40">40 inches (101 cm)</option>
+                                <option value="42">42 inches (106 cm)</option>
+                                <option value="44">44 inches (111 cm)</option>
+                                <option value="46">46 inches (116 cm)</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="waist">Waist Size</label>
+                            <select id="waist" name="waist">
+                                <option value="" selected>Not Sure / Skip</option>
+                                <option value="28">28 inches (71 cm)</option>
+                                <option value="30">30 inches (76 cm)</option>
+                                <option value="32">32 inches (81 cm)</option>
+                                <option value="34">34 inches (86 cm)</option>
+                                <option value="36">36 inches (91 cm)</option>
+                                <option value="38">38 inches (96 cm)</option>
+                                <option value="40">40 inches (101 cm)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider">
+                    <span>FIND SIZE IN</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="target_brand">Target Brand</label>
+                    <select id="target_brand" name="target_brand" required>
+                        <option value="" disabled selected>Select the brand you want to buy...</option>
+                        <option value="Zara">Zara</option>
+                        <option value="H&M">H&M</option>
+                        <option value="Levi's">Levi's</option>
+                        <option value="Nike">Nike</option>
+                        <option value="Adidas">Adidas</option>
+                        <option value="Puma">Puma</option>
+                        <option value="Gap">Gap</option>
+                        <option value="Calvin Klein">Calvin Klein</option>
+                        <option value="Ralph Lauren">Ralph Lauren</option>
+                        <option value="Gucci">Gucci</option>
+                        <option value="Prada">Prada</option>
+                        <option value="Zudio">Zudio</option>
+                        <option value="Uniqlo">Uniqlo</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">Get Recommendation</span>
+                    <div class="loader hidden" id="loader"></div>
+                </button>
+            </form>
+        </section>
+
+        <!-- Result Container (Hidden by default) -->
+        <section class="result-card hidden" id="result-card">
+            <div class="result-header">
+                <h2>Recommended Size</h2>
+                <div class="confidence-badge" id="confidence-badge">
+                    <span id="confidence-score">85</span>% Match
+                </div>
+            </div>
+            
+            <div class="size-display" id="size-display">L</div>
+            
+            <div class="reasoning-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <p id="reasoning-text">Based on our data, this brand generally fits smaller.</p>
+            </div>
+            
+            <button class="reset-btn" id="reset-btn">Check Another Size</button>
+        </section>
+
+        <!-- Error Container (Hidden by default) -->
+        <section class="error-card hidden" id="error-card">
+            <p id="error-text">No mapping found.</p>
+            <button class="reset-btn" id="error-reset-btn">Try Again</button>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
